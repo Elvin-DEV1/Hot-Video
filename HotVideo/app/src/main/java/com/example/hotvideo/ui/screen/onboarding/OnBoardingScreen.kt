@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.hotvideo.ui.screen.Dimens.IndicatorPageWidth
 import com.example.hotvideo.ui.screen.Dimens.MediumPadding2
+import com.example.hotvideo.ui.screen.common.VideoButton
 import com.example.hotvideo.ui.screen.common.VideoTextButton
 import com.example.hotvideo.ui.screen.onboarding.components.OnBoardingPage
 import com.example.hotvideo.ui.screen.onboarding.components.PageIndicator
@@ -62,22 +63,39 @@ fun OnBoardScreen() {
                 pageSize = pages.size,
                 selectedPage = pagerState.currentPage
             )
-        }
 
-        Row(verticalAlignment = Alignment.CenterVertically) {
 
-            val scope = rememberCoroutineScope()
+            Row(verticalAlignment = Alignment.CenterVertically) {
 
-            if (buttonState.value[0].isNotEmpty()) {
-                VideoTextButton(text = buttonState.value[0],
+                val scope = rememberCoroutineScope()
+
+                if (buttonState.value[0].isNotEmpty()) {
+                    VideoTextButton(text = buttonState.value[0],
+                        onClick = {
+                            scope.launch {
+                                pagerState.animateScrollToPage(page = pagerState.currentPage - 1)
+                            }
+                        }
+                    )
+                }
+
+                VideoButton(
+                    text = buttonState.value[1],
                     onClick = {
                         scope.launch {
-                            pagerState.animateScrollToPage(page = pagerState.currentPage - 1)
+                            if (pagerState.currentPage == 5) {
+                                //TODO navigate to home screen
+                            } else {
+                                pagerState.animateScrollToPage(
+                                    page = pagerState.currentPage + 1
+                                )
+                            }
                         }
                     }
                 )
             }
         }
+        Spacer(modifier = Modifier.weight(0.5f))
     }
 }
 
