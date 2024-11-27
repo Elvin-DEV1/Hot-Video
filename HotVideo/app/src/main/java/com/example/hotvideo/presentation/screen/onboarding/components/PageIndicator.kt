@@ -1,4 +1,4 @@
-package com.example.hotvideo.ui.screen.onboarding.components
+package com.example.hotvideo.presentation.screen.onboarding.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import com.example.hotvideo.ui.screen.Dimens.IndicatorSize
+import com.example.hotvideo.presentation.screen.Dimens.IndicatorSize
 import com.example.hotvideo.ui.theme.BlueGray
 
 @Composable

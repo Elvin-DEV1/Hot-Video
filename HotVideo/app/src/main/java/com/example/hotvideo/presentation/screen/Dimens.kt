@@ -1,4 +1,4 @@
-package com.example.hotvideo.ui.screen
+package com.example.hotvideo.presentation.screen
 
 import androidx.compose.ui.unit.dp
 

@@ -1,4 +1,4 @@
-package com.example.hotvideo.ui.screen.onboarding
+package com.example.hotvideo.presentation.screen.onboarding
 
 import androidx.annotation.DrawableRes
 import com.example.hotvideo.R

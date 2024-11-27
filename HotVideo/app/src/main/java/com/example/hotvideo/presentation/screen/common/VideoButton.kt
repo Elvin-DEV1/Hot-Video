@@ -1,4 +1,4 @@
-package com.example.hotvideo.ui.screen.common
+package com.example.hotvideo.presentation.screen.common
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button

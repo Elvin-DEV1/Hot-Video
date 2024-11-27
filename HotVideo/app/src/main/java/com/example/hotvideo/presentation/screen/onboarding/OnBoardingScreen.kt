@@ -1,4 +1,4 @@
-package com.example.hotvideo.ui.screen.onboarding
+package com.example.hotvideo.presentation.screen.onboarding
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,12 +18,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.hotvideo.ui.screen.Dimens.IndicatorPageWidth
-import com.example.hotvideo.ui.screen.Dimens.MediumPadding2
-import com.example.hotvideo.ui.screen.common.VideoButton
-import com.example.hotvideo.ui.screen.common.VideoTextButton
-import com.example.hotvideo.ui.screen.onboarding.components.OnBoardingPage
-import com.example.hotvideo.ui.screen.onboarding.components.PageIndicator
+import com.example.hotvideo.presentation.screen.Dimens.IndicatorPageWidth
+import com.example.hotvideo.presentation.screen.Dimens.MediumPadding2
+import com.example.hotvideo.presentation.screen.common.VideoButton
+import com.example.hotvideo.presentation.screen.common.VideoTextButton
+import com.example.hotvideo.presentation.screen.onboarding.components.OnBoardingPage
+import com.example.hotvideo.presentation.screen.onboarding.components.PageIndicator
 import kotlinx.coroutines.launch
 
 @Composable

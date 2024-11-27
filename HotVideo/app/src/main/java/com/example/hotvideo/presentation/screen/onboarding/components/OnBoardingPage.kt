@@ -1,4 +1,4 @@
-package com.example.hotvideo.ui.screen.onboarding.components
+package com.example.hotvideo.presentation.screen.onboarding.components
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
@@ -18,10 +18,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.hotvideo.R
-import com.example.hotvideo.ui.screen.Dimens.MediumPadding1
-import com.example.hotvideo.ui.screen.Dimens.MediumPadding2
-import com.example.hotvideo.ui.screen.onboarding.Page
-import com.example.hotvideo.ui.screen.onboarding.pages
+import com.example.hotvideo.presentation.screen.Dimens.MediumPadding1
+import com.example.hotvideo.presentation.screen.Dimens.MediumPadding2
+import com.example.hotvideo.presentation.screen.onboarding.Page
+import com.example.hotvideo.presentation.screen.onboarding.pages
 import com.example.hotvideo.ui.theme.HotVideoTheme
 
 @Composable
