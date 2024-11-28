@@ -58,6 +58,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.navigation.compose)
+    implementation(libs.coil.compose)
 
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.ktx)
@@ -78,6 +80,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.datastore.preferences.core)
+    implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.paging.compose)
+    implementation(libs.paging.runtime.ktx)
 }
 
 kapt {

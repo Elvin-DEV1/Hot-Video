@@ -19,6 +19,10 @@ gson = "2.11.0"
 splashApi = "1.0.1"
 kotlinxCoroutinesAndroid = "1.9.0"
 androidxDatastore = "1.1.1"
+navigationCompose = "2.8.4"
+accompanist = "0.31.4-beta"
+pagingVersion = "3.3.4"
+coilCompose = "2.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +39,7 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+navigation-compose = {group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose"}
 
 #Coroutines
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
@@ -66,6 +71,16 @@ androidx-splash-api = { group = "androidx.core", name = "core-splashscreen", ver
 
 #Data store
 datastore-preferences-core = {group = "androidx.datastore", name = "datastore-preferences", version.ref = "androidxDatastore"}
+
+#paging
+paging-runtime-ktx = {group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "pagingVersion"}
+paging-compose = {group = "androidx.paging", name = "paging-compose", version.ref = "pagingVersion"}
+
+#coil
+coil-compose = {group = "io.coil-kt", name = "coil-compose", version.ref = "coilCompose"}
+
+#accompanist
+accompanist-systemuicontroller = {group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

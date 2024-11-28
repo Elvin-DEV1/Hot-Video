@@ -1,4 +1,4 @@
-package com.example.hotvideo.domain.usecases
+package com.example.hotvideo.domain.usecases.app_entry
 
 import com.example.hotvideo.domain.manager.LocalUserManager
 

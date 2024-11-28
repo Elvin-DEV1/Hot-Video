@@ -17,7 +17,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.hotvideo.presentation.screen.Dimens.IndicatorPageWidth
 import com.example.hotvideo.presentation.screen.Dimens.MediumPadding2
 import com.example.hotvideo.presentation.screen.common.VideoButton
@@ -27,7 +26,9 @@ import com.example.hotvideo.presentation.screen.onboarding.components.PageIndica
 import kotlinx.coroutines.launch
 
 @Composable
-fun OnBoardScreen() {
+fun OnBoardScreen(
+    event: (OnBoardingEvent) -> Unit
+) {
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(initialPage = 0) {
             pages.size
@@ -37,8 +38,8 @@ fun OnBoardScreen() {
             derivedStateOf {
                 when (pagerState.currentPage) {
                     0 -> listOf("", "Next")
-                    1, 2, 3 -> listOf("Back", "Next")
-                    4 -> listOf("Back", "Get Started")
+                    1, 2 -> listOf("Back", "Next")
+                    3 -> listOf("Back", "Get Started")
                     else -> listOf("", "")
                 }
             }
@@ -84,7 +85,7 @@ fun OnBoardScreen() {
                     onClick = {
                         scope.launch {
                             if (pagerState.currentPage == 5) {
-                                //TODO navigate to home screen
+                                event(OnBoardingEvent.saveAppEntry)
                             } else {
                                 pagerState.animateScrollToPage(
                                     page = pagerState.currentPage + 1
@@ -97,10 +98,4 @@ fun OnBoardScreen() {
         }
         Spacer(modifier = Modifier.weight(0.5f))
     }
-}
-
-@Preview
-@Composable
-fun OnBoardScreenPreview() {
-    OnBoardScreen()
 }
